@@ -1,20 +1,15 @@
 public class VehicleDemo {
     public static void main(String[] args) {
-        System.out.println("Vehicle Demonstration\n");
+        ElectricCar eCar = new ElectricCar("Blue");
+        eCar.start();
+        eCar.charge();
+        System.out.println(eCar.getInfo());
 
-        Vehicle car = new Car();
-        car.start();
-        car.stop();
-        System.out.println(car.getInfo() + "\n");
+        System.out.println();
 
-        Vehicle motorcycle = new Motorcycle();
-        motorcycle.start();
-        motorcycle.stop();
-        System.out.println(motorcycle.getInfo() + "\n");
-
-        Vehicle bus = new Bus();
-        bus.start();
-        bus.stop();
-        System.out.println(bus.getInfo());
+        ElectricMotorcycle eBike = new ElectricMotorcycle("Green");
+        eBike.start();
+        eBike.charge();
+        System.out.println(eBike.getInfo());
     }
 }

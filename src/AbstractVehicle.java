@@ -1,5 +1,4 @@
-// AbstractVehicle.java
-public abstract class AbstractVehicle implements Vehicle {
+public abstract class AbstractVehicle implements Vehicle, ElectricVehicle {
     protected String type;
     protected String fuel;
     protected String color;
@@ -23,5 +22,10 @@ public abstract class AbstractVehicle implements Vehicle {
     @Override
     public String getInfo() {
         return "Type: " + type + "\nFuel: " + fuel + "\nColor: " + color;
+    }
+
+    @Override
+    public void charge() {
+        System.out.println("Charging not supported for " + type + ".");
     }
 }
