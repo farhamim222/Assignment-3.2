@@ -1,11 +1,11 @@
-public class ElectricCar extends AbstractVehicle {
-
+public class ElectricCar extends AbstractVehicle implements ElectricVehicle {
     public ElectricCar(String color) {
-        super("Electric Car", "Electric", color);
+        // Electric car, say 5.2 kWh/100km
+        super("Electric Car", "Electric", color, 5.2);
     }
 
     @Override
     public void charge() {
-        System.out.println(type + " is charging...");
+        System.out.println("Electric Car is charging...");
     }
 }

@@ -1,12 +1,14 @@
-public abstract class AbstractVehicle implements Vehicle, ElectricVehicle {
+public abstract class AbstractVehicle implements Vehicle {
     protected String type;
     protected String fuel;
     protected String color;
+    protected double efficiency;
 
-    public AbstractVehicle(String type, String fuel, String color) {
+    public AbstractVehicle(String type, String fuel, String color, double efficiency) {
         this.type = type;
         this.fuel = fuel;
         this.color = color;
+        this.efficiency = efficiency;
     }
 
     @Override
@@ -25,7 +27,7 @@ public abstract class AbstractVehicle implements Vehicle, ElectricVehicle {
     }
 
     @Override
-    public void charge() {
-        System.out.println("Charging not supported for " + type + ".");
+    public double calculateFuelEfficiency() {
+        return efficiency;
     }
 }
