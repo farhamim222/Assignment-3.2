@@ -1,16 +1,13 @@
-public class Bus implements Vehicle {
-    @Override
-    public void start() {
-        System.out.println("Bus is starting...");
-    }
+public class Bus extends AbstractVehicle {
+    private int capacity;
 
-    @Override
-    public void stop() {
-        System.out.println("Bus is stopping...");
+    public Bus() {
+        super("Bus", "Diesel", "Yellow");
+        this.capacity = 40;
     }
 
     @Override
     public String getInfo() {
-        return "Bus Information:\nType: Bus\nFuel: Diesel\nCapacity: 40 passengers";
+        return super.getInfo() + "\nCapacity: " + capacity + " passengers";
     }
 }
